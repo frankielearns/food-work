@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    image: django:latest
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/code
+    working_dir: /code/yumreport
+    stdin_open: true
+    tty: true

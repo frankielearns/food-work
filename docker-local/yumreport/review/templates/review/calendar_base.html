@@ -1,0 +1,9 @@
+{% extends 'review/index.html' %}
+
+{% block title %}{{ title }}{% endblock title %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <p>{% autoescape off %}{{ cal }}{% endautoescape %}</p>
+    {% include "review/announcements.html" %}
+{% endblock content %}
